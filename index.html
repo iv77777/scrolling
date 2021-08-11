@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Плавная прокрутка до якоря на чистом Java Script</title>
+	<link rel="stylesheet" href="nav.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<div class="header__wrapper">
+				<nav class="nav">
+					<ul class="visible-menu">
+						<!-- плавний скрол по дата атрибутам (болие гибкий) -->
+						<li><a class="menu__link" data-goto="#section-1" href="#">Section-1</a></li>
+						<li><a class="menu__link" data-goto="#section-2" href="#">Section-2</a></li>
+						<li><a class="menu__link" data-goto="#section-3" href="#">Section-3</a></li>
+						<li><a class="menu__link" data-goto="#section-4" href="#">Section-4</a></li>
+						<li><a class="menu__link" data-goto="#section-5" href="#">Section-5</a></li>
+						<li><a class="menu__link" data-goto="#section-6" href="#">Section-6</a></li>
+						<!-- плавний скрол по дата атрибутам (болие гибкий) -->
+
+						<!-- плавний скрол по якорям (залазет под шапку страници)-->
+						<!-- <li><a class="menu__link" href="#section-1">Section-1</a></li>
+						<li><a class="menu__link" href="#section-2">Section-2</a></li>
+						<li><a class="menu__link" href="#section-3">Section-3</a></li>
+						<li><a class="menu__link" href="#section-4">Section-4</a></li>
+						<li><a class="menu__link" href="#section-5">Section-5</a></li>
+						<li><a class="menu__link" href="#section-6">Section-6</a></li> -->
+						<!-- плавний скрол по якорям -->
+					</ul>
+					<button class="burger hidden">
+
+						<svg width="30" height="40">
+							<circle cx="15" cy="10" r="2" fill="#fff" />
+							<circle cx="15" cy="20" r="2" fill="#fff" />
+							<circle cx="15" cy="30" r="2" fill="#fff" />
+						</svg>
+
+						<div class="burger-count"></div>
+					</button>
+					<ul class="hidden-menu"></ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__wrapper">
+				<div class="main__content">
+					<section class="section section-1" id="section-1">
+						<h1>Section-1</h1>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+					</section>
+
+					<section class="section section-2" id="section-2">
+						<h1>Section-2</h1>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+					</section>
+
+					<section class="section section-3" id="section-3">
+						<h1>Section-3</h1>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+					</section>
+					<section class="section section-4" id="section-4">
+						<h1>Section-4</h1>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+					</section>
+
+					<section class="section section-5" id="section-5">
+						<h1>Section-5</h1>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+					</section>
+
+					<section class="section section-6" id="section-6">
+						<h1>Section-6</h1>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum asperiores. Cumque alias
+							officiis provident eius officia natus maxime, consequatur, reiciendis consectetur perferendis sunt
+							temporibus saepe excepturi ipsam quas dicta?
+						</p>
+					</section>
+				</div>
+				<!-- <aside class="aside">
+					<ul class="aside-ul">
+						<li><a class="menu__link" data-goto="#section-1" href="#section-1">Section-1</a></li>
+						<li><a class="menu__link" data-goto="#section-2" href="#section-2">Section-2</a></li>
+						<li><a class="menu__link" data-goto="#section-3" href="#section-3">Section-3</a></li>
+						<li><a class="menu__link" data-goto="#section-4" href="#section-4">Section-4</a></li>
+						<li><a class="menu__link" data-goto="#section-5" href="#section-5">Section-5</a></li>
+						<li><a class="menu__link" data-goto="#section-6" href="#section-6">Section-6</a></li>
+					</ul>
+				</aside> -->
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				footer
+			</div>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+	<script src="nav.js"></script>
+</body>
+
+</html>
