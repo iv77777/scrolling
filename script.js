@@ -55,7 +55,7 @@ if (menuLinks.length > 0) {
 			// находим елемент на который ссылается етот дата атрибут
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
 			// получаем положения елемента от верха страницы + количество прокручаных px по вертикали - отнемаем высоты шапки(heder)
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.visible-menu').offsetHeight;
 
 			// Свойство scrollTop плавно прокручувает страницу документа до указанных координат.
 			window.scrollTo({
